@@ -1,0 +1,44 @@
+name: romantic_common
+description: Package including lot helpers for easy developing on dart language.
+version: 0.0.1+1
+repository: https://github.com/RomanticEra/romantic_common
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+dependencies:
+  args: ^2.3.0
+  enum_to_string: ^2.0.1
+  fhir_yaml: ^0.5.1
+  path: ^1.8.0
+  recase: ^4.0.0
+  universal_io: ^2.0.4
+
+dev_dependencies:
+  masonx:
+    path: /Users/huangzheng/mason_from
+  mocktail: ^0.2.0
+  romantic_analysis: ^0.0.1-dev.1
+  romantic_fake:
+      path: /Users/huangzheng/RomanticEra/romantic_fake/packages/romantic_fake
+  test: ^1.19.2
+executables:
+  romantic_common:
+scripts:
+  test: |
+    ## Run Dart tests and output them at directory `./coverage`:
+    dart run test --coverage=./coverage
+
+    ## Format collected coverage to LCOV (only for directory "lib")
+    dart pub global run coverage:format_coverage --packages=.packages --report-on=lib --lcov -o ./coverage/lcov.info -i ./coverage --check-ignore
+    derry get_coverage
+  get_coverage: |
+    ## Generate LCOV report:
+    genhtml -o ./coverage/report ./coverage/lcov.info
+
+    ## Open the HTML coverage report:
+    open ./coverage/report/index.html
+  commit: |
+    dart run test
+    readme_helper
+    pana .
+    git commit
