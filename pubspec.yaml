@@ -1,6 +1,6 @@
 name: romantic_common
 description: Package including lot helpers for easy developing on dart language.
-version: 0.0.1+1
+version: 0.0.2
 repository: https://github.com/RomanticEra/romantic_common
 
 environment:

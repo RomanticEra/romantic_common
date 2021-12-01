@@ -23,6 +23,10 @@ void main() {
         expect(argResult3.dict('bundle-path', 0), bundlePath);
         expect(argResult3.dict('output-dir', 1), outdir.path);
       });
+      test('[derivedArgResult0][${derivedArgResult0.arguments}]', () {
+        expect(derivedArgResult0.dict('bundle-path', -1), bundlePath);
+        expect(derivedArgResult0.dict('output-dir', -1), outdir.path);
+      });
     });
   });
   group('[Argument2Statistical]', () {
