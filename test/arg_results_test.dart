@@ -27,6 +27,11 @@ void main() {
         expect(derivedArgResult0.dict('bundle-path', -1), bundlePath);
         expect(derivedArgResult0.dict('output-dir', -1), outdir.path);
       });
+      // test('[patch]', () {
+      //   // final patchArgResult =
+      //   expect(derivedArgResult0.dict('bundle-path', -1), bundlePath);
+      //   expect(derivedArgResult0.dict('output-dir', -1), outdir.path);
+      // });
     });
   });
   group('[Argument2Statistical]', () {

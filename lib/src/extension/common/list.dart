@@ -46,3 +46,9 @@ extension Switch<T> on Iterable<T> {
   List<String> get toParamCase =>
       map((e) => e.toString().enumNormalized.paramCase).toList();
 }
+
+/// DecodeBase64
+extension DecodeBase64 on List<int> {
+  /// DecodeBase64
+  String get fromCharCodes => String.fromCharCodes(this);
+}

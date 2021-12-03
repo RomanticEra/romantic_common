@@ -21,10 +21,8 @@ extension GetJsonFile on String {
   /// return MasonBundle.fromJson(await bundlePath.getFileWithJson)
   /// ```
   Future<Map<String, dynamic>> get getFileWithJson async {
-    final jsonFile = File(this);
-    final jsonStr = await jsonFile.readAsString();
-    final json = jsonDecode(jsonStr) as Map<String, dynamic>;
-    return json;
+    final jsonStr = await File(this).readAsString();
+    return jsonDecode(jsonStr) as Map<String, dynamic>;
   }
 }
 

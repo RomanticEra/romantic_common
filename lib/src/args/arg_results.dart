@@ -41,7 +41,7 @@ class Argument2Statistical<T> {
 extension ArgumentParse<T> on Argument2Statistical<T> {
   /// throught paramCase to get the value of param.
   String paramCaseParse(String paramCase) =>
-      _results.dict(paramCase, preOrderNoExistMap[paramCase]! - 1);
+      _results.dict(paramCase, (preOrderNoExistMap[paramCase] ?? 0) - 1);
 
   /// throught enum to get the value of param.
   String enumParse(T _enum) =>

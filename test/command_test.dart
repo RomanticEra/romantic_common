@@ -1,7 +1,6 @@
 import 'package:masonx/masonx.dart';
-import 'package:romantic_common/romantic_common.dart';
+import 'package:romantic_common/src/extension/common/list.dart';
 import 'package:romantic_common/src/test/override_print.dart';
-import 'package:romantic_fake/romantic_fake.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -17,4 +16,11 @@ void main() {
       );
     }),
   );
+  test('[fromCharCodes]', () {
+    expect(
+      [72, 101, 108, 108, 111, 32, 123, 123, 110, 97, 109, 101, 125, 125, 33]
+          .fromCharCodes,
+      'Hello {{name}}!',
+    );
+  });
 }
