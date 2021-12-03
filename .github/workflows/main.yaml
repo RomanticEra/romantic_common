@@ -45,7 +45,7 @@ jobs:
   build:
     needs: setup
 
-    runs-on: $
+    runs-on: ${{ matrix.os }}
 
     strategy:
       fail-fast: false
@@ -90,7 +90,7 @@ jobs:
       - name: Publish
         uses: sakebook/actions-flutter-pub-publisher@v1.3.1
         with:
-          credential: $
+          credential: ${{ secrets.CREDENTIAL_JSON }}
           flutter_package: false
           skip_test: true
           # dry_run: true

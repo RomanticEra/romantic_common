@@ -1,6 +1,6 @@
 name: romantic_common
 description: Package including lot helpers for easy developing on dart language.
-version: 0.0.2
+version: 0.0.3
 repository: https://github.com/RomanticEra/romantic_common
 
 environment:
@@ -21,8 +21,6 @@ dev_dependencies:
   romantic_fake:
       path: /Users/huangzheng/RomanticEra/romantic_fake/packages/romantic_fake
   test: ^1.19.2
-executables:
-  romantic_common:
 scripts:
   test: |
     ## Run Dart tests and output them at directory `./coverage`:
