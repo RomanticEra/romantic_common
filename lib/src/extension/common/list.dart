@@ -48,7 +48,7 @@ extension Switch<T> on Iterable<T> {
 }
 
 /// DecodeBase64
-extension DecodeBase64 on List<int> {
+extension DecodeInt2String on List<int> {
   /// DecodeBase64
   String get fromCharCodes => String.fromCharCodes(this);
 }
