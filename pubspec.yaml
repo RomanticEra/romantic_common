@@ -14,12 +14,15 @@ dependencies:
   universal_io: ^2.0.4
 
 dev_dependencies:
-  masonx: ^0.0.7
+  masonx: ^0.0.9
   mocktail: ^0.2.0
   romantic_analysis: ^0.0.1-dev.1
   romantic_fake:
       path: /Users/huangzheng/RomanticEra/romantic_fake/packages/romantic_fake
   test: ^1.19.2
+dependency_overrides:
+  masonx:
+    path: ../masonx
 scripts:
   test: |
     ## Run Dart tests and output them at directory `./coverage`:
